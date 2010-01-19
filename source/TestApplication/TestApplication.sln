@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication\TestApplication.csproj", "{7FB79F77-CE9E-4D15-AE2C-842099A21A32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ext.Direct.Mvc", "..\Ext.Direct.Mvc\Ext.Direct.Mvc\Ext.Direct.Mvc.csproj", "{BAE22E76-F2A1-4DDE-9F96-23D7005149D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FB79F77-CE9E-4D15-AE2C-842099A21A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB79F77-CE9E-4D15-AE2C-842099A21A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB79F77-CE9E-4D15-AE2C-842099A21A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB79F77-CE9E-4D15-AE2C-842099A21A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE22E76-F2A1-4DDE-9F96-23D7005149D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE22E76-F2A1-4DDE-9F96-23D7005149D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE22E76-F2A1-4DDE-9F96-23D7005149D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE22E76-F2A1-4DDE-9F96-23D7005149D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

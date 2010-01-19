@@ -1,0 +1,32 @@
+D:\Development\Ext.Direct for MVC\Ext.Direct.Mvc\Ext.Direct.Mvc\bin\Ext.Direct.Mvc.dll
+D:\Development\Ext.Direct for MVC\Ext.Direct.Mvc\Ext.Direct.Mvc\bin\Ext.Direct.Mvc.pdb
+D:\Development\Ext.Direct for MVC\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\ResolveAssemblyReference.cache
+D:\Development\Ext.Direct for MVC\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.dll
+D:\Development\Ext.Direct for MVC\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.pdb
+D:\Development\Ext.Direct for MVC\Ext.Direct.Mvc\Ext.Direct.Mvc\bin\Newtonsoft.Json.xml
+D:\Development\Ext.Direct for MVC\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.Resources.DirectResources.resources
+D:\Development\Ext.Direct for MVC\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.csproj.GenerateResource.Cache
+D:\Development\Ext.Direct for MVC\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\ResolveAssemblyReference.cache
+D:\Development\Ext.Direct for MVC\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.Resources.DirectResources.resources
+D:\Development\Ext.Direct for MVC\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.csproj.GenerateResource.Cache
+D:\Development\Ext.Direct for MVC\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.dll
+D:\Development\Ext.Direct for MVC\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.pdb
+D:\Development\Ext.Direct for MVC\source\Ext.Direct.Mvc\Ext.Direct.Mvc\bin\Ext.Direct.Mvc.dll
+D:\Development\Ext.Direct for MVC\source\Ext.Direct.Mvc\Ext.Direct.Mvc\bin\Ext.Direct.Mvc.pdb
+D:\Development\Ext.Direct for MVC\source\Ext.Direct.Mvc\Ext.Direct.Mvc\bin\Newtonsoft.Json.xml
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc\Ext.Direct.Mvc\bin\Ext.Direct.Mvc.dll
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc\Ext.Direct.Mvc\bin\Ext.Direct.Mvc.pdb
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc\Ext.Direct.Mvc\bin\Newtonsoft.Json.xml
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\ResolveAssemblyReference.cache
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.Resources.DirectResources.resources
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.csproj.GenerateResource.Cache
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.dll
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.pdb
+D:\Temp\Direct\Ext.Direct.Mvc\bin\Ext.Direct.Mvc.dll
+D:\Temp\Direct\Ext.Direct.Mvc\bin\Ext.Direct.Mvc.pdb
+D:\Temp\Direct\Ext.Direct.Mvc\bin\Newtonsoft.Json.xml
+D:\Temp\Direct\Ext.Direct.Mvc\obj\Debug\ResolveAssemblyReference.cache
+D:\Temp\Direct\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.Resources.DirectResources.resources
+D:\Temp\Direct\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.csproj.GenerateResource.Cache
+D:\Temp\Direct\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.dll
+D:\Temp\Direct\Ext.Direct.Mvc\obj\Debug\Ext.Direct.Mvc.pdb

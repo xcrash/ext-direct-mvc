@@ -7,3 +7,12 @@ D:\Temp\Direct\Ext.Direct.Mvc.Demo\bin\Ext.Direct.Mvc.pdb
 D:\Temp\Direct\Ext.Direct.Mvc.Demo\bin\Newtonsoft.Json.xml
 D:\Temp\Direct\Ext.Direct.Mvc.Demo\obj\Debug\Ext.Direct.Mvc.Demo.dll
 D:\Temp\Direct\Ext.Direct.Mvc.Demo\obj\Debug\Ext.Direct.Mvc.Demo.pdb
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc.Demo\bin\Ext.Direct.Mvc.Demo.dll
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc.Demo\bin\Ext.Direct.Mvc.Demo.pdb
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc.Demo\bin\Ext.Direct.Mvc.dll
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc.Demo\bin\Newtonsoft.Json.dll
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc.Demo\bin\Ext.Direct.Mvc.pdb
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc.Demo\bin\Newtonsoft.Json.xml
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc.Demo\obj\Debug\ResolveAssemblyReference.cache
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc.Demo\obj\Debug\Ext.Direct.Mvc.Demo.dll
+D:\Development\Ext.Direct for MVC 1.0\source\Ext.Direct.Mvc.Demo\obj\Debug\Ext.Direct.Mvc.Demo.pdb

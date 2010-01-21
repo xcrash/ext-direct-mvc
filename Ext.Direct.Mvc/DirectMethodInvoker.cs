@@ -34,14 +34,14 @@ namespace Ext.Direct.Mvc {
             Dictionary<string, object> parametersDict = new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase);
             ParameterDescriptor[] parameterDescriptors = actionDescriptor.GetParameters();
             DirectRequest directRequest = controllerContext.HttpContext.Items[DirectRequest.DirectRequestKey] as DirectRequest;
-            CultureInfo invariantCulture = CultureInfo.InvariantCulture;
-            IDictionary<string, ValueProviderResult> valueProvider = new Dictionary<string, ValueProviderResult>();
 
             if (directRequest == null) {
                 throw new NullReferenceException(DirectResources.Common_DirectRequestIsNull);
             }
 
             if (!directRequest.IsFormPost) {
+                CultureInfo invariantCulture = CultureInfo.InvariantCulture;
+                var valueProvider = new ValueProviderDictionary(controllerContext);
                 object[] data = directRequest.Data;
 
                 for (int i = 0; i < parameterDescriptors.Length; i++) {

@@ -56,8 +56,13 @@ namespace Ext.Direct.Mvc {
         }
 
         public string Url {
-            get;
-            set;
+            get {
+                string appPath = HttpContext.Current.Request.ApplicationPath;
+                if (!appPath.EndsWith("/")) {
+                    appPath += "/";
+                }
+                return appPath + "Direct/Route";
+            }
         }
 
         public string Namespace {
@@ -218,15 +223,9 @@ namespace Ext.Direct.Mvc {
             if (_currentProvider == null) {
                 lock (_syncLock) {
                     if (_currentProvider == null) {
-                        string appPath = HttpContext.Current.Request.ApplicationPath;
-                        if (!appPath.EndsWith("/")) {
-                            appPath += "/";
-                        }
-
                         Assembly assembly = Assembly.Load(DirectConfig.Assembly);
                         _currentProvider = new DirectProvider(assembly) {
                             Name = DirectConfig.ProviderName,
-                            Url = appPath + DirectConfig.RouterUrl,
                             Namespace = DirectConfig.Namespace,
                             Buffer = DirectConfig.Buffer
                         };

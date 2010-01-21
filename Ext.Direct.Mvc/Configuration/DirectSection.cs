@@ -30,16 +30,6 @@ namespace Ext.Direct.Mvc.Configuration {
             get { return (string)this["providerName"]; }
         }
 
-        [ConfigurationProperty("apiUrl", IsRequired = true)]
-        public string ApiUrl {
-            get { return (string)this["apiUrl"]; }
-        }
-
-        [ConfigurationProperty("routerUrl", IsRequired = true)]
-        public string RouterUrl {
-            get { return (string)this["routerUrl"]; }
-        }
-
         [ConfigurationProperty("assembly", IsRequired = true)]
         public string Assembly {
             get { return (string)this["assembly"]; }

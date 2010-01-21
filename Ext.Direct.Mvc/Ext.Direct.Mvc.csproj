@@ -53,6 +53,7 @@
     <Compile Include="Attributes\DirectIgnoreAttribute.cs" />
     <Compile Include="Configuration\DirectConfig.cs" />
     <Compile Include="DirectAction.cs" />
+    <Compile Include="DirectController.cs" />
     <Compile Include="DirectErrorResponse.cs" />
     <Compile Include="DirectEventResponse.cs" />
     <Compile Include="DirectEventResult.cs" />
@@ -62,13 +63,10 @@
     <Compile Include="Extensions\ControllerExtensions.cs" />
     <Compile Include="Extensions\MethodExtensions.cs" />
     <Compile Include="Extensions\TypeExtensions.cs" />
-    <Compile Include="DirectHttpModule.cs" />
     <Compile Include="Configuration\DirectSection.cs" />
     <Compile Include="DirectMethod.cs" />
     <Compile Include="Attributes\FormHandlerAttribute.cs" />
     <Compile Include="DirectMethodInvoker.cs" />
-    <Compile Include="DirectMvcHandler.cs" />
-    <Compile Include="DirectMvcRouteHandler.cs" />
     <Compile Include="DirectProvider.cs" />
     <Compile Include="DirectRequest.cs" />
     <Compile Include="DirectResponse.cs" />

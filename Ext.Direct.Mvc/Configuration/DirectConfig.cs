@@ -42,13 +42,6 @@ namespace Ext.Direct.Mvc.Configuration {
             get { return _directSection.ProviderName; }
         }
 
-        public static string ApiUrl {
-            get { return _directSection.ApiUrl; }
-        }
-
-        public static string RouterUrl {
-            get { return _directSection.RouterUrl; }
-        }
 
         public static string Namespace {
             get { return _directSection.Namespace; }

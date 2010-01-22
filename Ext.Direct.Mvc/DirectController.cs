@@ -27,6 +27,7 @@ namespace Ext.Direct.Mvc {
 
         readonly DirectProvider _provider = DirectProvider.GetCurrentProvider();
 
+        [AcceptVerbs("GET")]
         public ActionResult Api() {
             // Write Ext.Direct API
 
@@ -36,6 +37,7 @@ namespace Ext.Direct.Mvc {
             return JavaScript(_provider.ToJavaScript(toJson));
         }
 
+        [AcceptVerbs("POST")]
         public ActionResult Route() {
             // Process Ext.Direct requests
 

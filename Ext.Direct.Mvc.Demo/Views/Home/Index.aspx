@@ -18,7 +18,7 @@
     <script type="text/javascript" src="<% = Url.Content("~/Source/TreeTestPanel.js") %>"></script>
     <script type="text/javascript" src="<% = Url.Content("~/Source/EmployeeGrid.js") %>"></script>
     
-    <!-- Direct API url is configured in web.config -->
+    <!-- Direct API -->
     <script type="text/javascript" src="<% = Url.Content("~/Direct/Api") %>"></script>
 </head>
 <body>

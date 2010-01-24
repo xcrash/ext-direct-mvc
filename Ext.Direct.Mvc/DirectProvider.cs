@@ -202,8 +202,10 @@ namespace Ext.Direct.Mvc {
                 throw new NullReferenceException(String.Format(DirectResources.DirectProvider_MethodNotFound, request.Method, action.Name));
             }
 
-            if (!method.IsFormHandler && request.Data != null && request.Data.Length != method.Len) {
-                throw new ArgumentException(DirectResources.DirectProvider_WrongNumberOfArguments);
+            if (!method.IsFormHandler) {
+                if (request.Data == null && method.Len > 0 || request.Data != null && request.Data.Length != method.Len) {
+                    throw new ArgumentException(DirectResources.DirectProvider_WrongNumberOfArguments);
+                }
             }
 
             try {

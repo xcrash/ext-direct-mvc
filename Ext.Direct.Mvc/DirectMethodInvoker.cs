@@ -39,7 +39,7 @@ namespace Ext.Direct.Mvc {
                 throw new NullReferenceException(DirectResources.Common_DirectRequestIsNull);
             }
 
-            if (!directRequest.IsFormPost) {
+            if (!directRequest.IsFormPost && directRequest.Data != null) {
                 CultureInfo invariantCulture = CultureInfo.InvariantCulture;
                 var valueProvider = new ValueProviderDictionary(null);
 

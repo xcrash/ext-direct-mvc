@@ -22,7 +22,6 @@
 namespace Ext.Direct.Mvc {
     using System;
     using System.Web.Mvc;
-    using Ext.Direct.Mvc.Resources;
 
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public class DirectHandleErrorAttribute : FilterAttribute, IExceptionFilter {
@@ -39,14 +38,12 @@ namespace Ext.Direct.Mvc {
             Exception exception = filterContext.Exception;
 
             var directRequest = filterContext.HttpContext.Items[DirectRequest.DirectRequestKey] as DirectRequest;
-            if (directRequest == null) {
-                throw new NullReferenceException(DirectResources.Common_DirectRequestIsNull);
+
+            if (directRequest != null) {
+                var errorResponse = new DirectErrorResponse(directRequest, exception);
+                errorResponse.Write(filterContext.HttpContext.Response);
+                filterContext.ExceptionHandled = true;
             }
-
-            var errorResponse = new DirectErrorResponse(directRequest, exception);
-            errorResponse.Write(filterContext.HttpContext.Response);
-
-            filterContext.ExceptionHandled = true;
         }
     }
 }

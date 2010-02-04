@@ -1,5 +1,5 @@
 ﻿Ext.onReady(function() {
-    Ext.BLANK_IMAGE_URL = 'http://extjs.cachefly.net/ext-3.0.3/resources/images/default/s.gif';
+    Ext.BLANK_IMAGE_URL = 'http://extjs.cachefly.net/ext-3.1.0/resources/images/default/s.gif';
     Ext.Direct.addProvider(Ext.app.REMOTING_API);
     Ext.QuickTips.init();
     

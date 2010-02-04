@@ -3,9 +3,9 @@ using System.Web.Mvc;
 
 namespace Ext.Direct.Mvc.Demo.Controllers {
 
+    [DirectIgnore]
     public class HomeController : Controller {
 
-        [DirectIgnore]
         [HandleError]
         public ActionResult Index() {
             return View();

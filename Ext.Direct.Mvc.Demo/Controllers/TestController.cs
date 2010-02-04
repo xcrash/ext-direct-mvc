@@ -45,13 +45,19 @@ namespace Ext.Direct.Mvc.Demo.Controllers {
                 Birthday = new DateTime(1969, 12, 31),
                 Salary = 55000
             };
-            return this.DirectForm(true, person);
+            return this.Direct(new {
+                success = true,
+                data = person
+            });
         }
 
         [FormHandler]
         [ActionName("SavePerson")] // Action alias
         public ActionResult SaveForm(Person p) {
-            return this.DirectForm(true, p, new StringEnumConverter());
+            return this.Direct(new {
+                success = true,
+                data = p
+            }, new StringEnumConverter());
         }
 
         [FormHandler]
@@ -67,9 +73,12 @@ namespace Ext.Direct.Mvc.Demo.Controllers {
                 hpf.SaveAs(savedFileName);
             }
 
-            return this.DirectForm(true, new {
-                FirstName = firstName,
-                LastName = lastName
+            return this.Direct(new {
+                success = true,
+                data = new {
+                    FirstName = firstName,
+                    LastName = lastName
+                }
             });
         }
 

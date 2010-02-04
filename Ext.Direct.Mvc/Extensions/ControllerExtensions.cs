@@ -28,27 +28,27 @@ namespace Ext.Direct.Mvc {
 
     public static class ControllerExtensions {
 
-        public static DirectResult Direct(this Controller controller, object data) {
+        public static DirectResult Direct(this IController controller, object data) {
             return controller.Direct(data, (string)null);
         }
 
-        public static DirectResult Direct(this Controller controller, object data, string contentType) {
+        public static DirectResult Direct(this IController controller, object data, string contentType) {
             return controller.Direct(data, contentType, (Encoding)null);
         }
 
-        public static DirectResult Direct(this Controller controller, object data, string contentType, Encoding contentEncoding) {
+        public static DirectResult Direct(this IController controller, object data, string contentType, Encoding contentEncoding) {
             return controller.Direct(data, contentType, contentEncoding, (JsonSerializerSettings)null);
         }
 
-        public static DirectResult Direct(this Controller controller, object data, params JsonConverter[] converters) {
+        public static DirectResult Direct(this IController controller, object data, params JsonConverter[] converters) {
             return controller.Direct(data, null, converters);
         }
 
-        public static DirectResult Direct(this Controller controller, object data, string contentType, params JsonConverter[] converters) {
+        public static DirectResult Direct(this IController controller, object data, string contentType, params JsonConverter[] converters) {
             return controller.Direct(data, contentType, null, converters);
         }
 
-        public static DirectResult Direct(this Controller controller, object data, string contentType, Encoding contentEncoding, params JsonConverter[] converters) {
+        public static DirectResult Direct(this IController controller, object data, string contentType, Encoding contentEncoding, params JsonConverter[] converters) {
             JsonSerializerSettings settings = (converters != null && converters.Length > 0)
                 ? new JsonSerializerSettings { Converters = converters }
                 : null;
@@ -56,7 +56,7 @@ namespace Ext.Direct.Mvc {
             return controller.Direct(data, contentType, contentEncoding, settings);
         }
 
-        public static DirectResult Direct(this Controller controller, object data, string contentType, Encoding contentEncoding, JsonSerializerSettings settings) {
+        public static DirectResult Direct(this IController controller, object data, string contentType, Encoding contentEncoding, JsonSerializerSettings settings) {
             return new DirectResult {
                 Data = data,
                 ContentType = contentType,
@@ -65,65 +65,31 @@ namespace Ext.Direct.Mvc {
             };
         }
 
-        public static DirectResult DirectForm(this Controller controller, bool success) {
-            return controller.DirectForm(success, null);
-        }
-
-        public static DirectResult DirectForm(this Controller controller, bool success, object data) {
-            return controller.DirectForm(success, data, (string)null);
-        }
-
-        public static DirectResult DirectForm(this Controller controller, bool success, object data, string contentType) {
-            return controller.DirectForm(success, data, contentType, (Encoding)null);
-        }
-
-        public static DirectResult DirectForm(this Controller controller, bool success, object data, string contentType, Encoding contentEncoding) {
-            return controller.DirectForm(success, data, contentType, contentEncoding, (JsonSerializerSettings)null);
-        }
-
-        public static DirectResult DirectForm(this Controller controller, bool success, object data, params JsonConverter[] converters) {
-            return controller.DirectForm(success, data, null, converters);
-        }
-
-        public static DirectResult DirectForm(this Controller controller, bool success, object data, string contentType, params JsonConverter[] converters) {
-            return controller.DirectForm(success, data, contentType, null, converters);
-        }
-
-        public static DirectResult DirectForm(this Controller controller, bool success, object data, string contentType, Encoding contentEncoding, params JsonConverter[] converters) {
-            var responseData = new DirectFormResponseData(success, data);
-            return controller.Direct(responseData, contentType, contentEncoding, converters);
-        }
-
-        public static DirectResult DirectForm(this Controller controller, bool success, object data, string contentType, Encoding contentEncoding, JsonSerializerSettings settings) {
-            var responseData = new DirectFormResponseData(success, data);
-            return controller.Direct(responseData, contentType, contentEncoding, settings);
-        }
-
-        public static DirectEventResult DirectEvent(this Controller controller, string name) {
+        public static DirectEventResult DirectEvent(this IController controller, string name) {
             return controller.DirectEvent(name, null);
         }
 
-        public static DirectEventResult DirectEvent(this Controller controller, string name, object data) {
+        public static DirectEventResult DirectEvent(this IController controller, string name, object data) {
             return controller.DirectEvent(name, data, (string)null);
         }
 
-        public static DirectEventResult DirectEvent(this Controller controller, string name, object data, string contentType) {
+        public static DirectEventResult DirectEvent(this IController controller, string name, object data, string contentType) {
             return controller.DirectEvent(name, data, contentType, (Encoding)null);
         }
 
-        public static DirectEventResult DirectEvent(this Controller controller, string name, object data, string contentType, Encoding contentEncoding) {
+        public static DirectEventResult DirectEvent(this IController controller, string name, object data, string contentType, Encoding contentEncoding) {
             return controller.DirectEvent(name, data, contentType, contentEncoding, (JsonSerializerSettings)null);
         }
 
-        public static DirectEventResult DirectEvent(this Controller controller, string name, object data, params JsonConverter[] converters) {
+        public static DirectEventResult DirectEvent(this IController controller, string name, object data, params JsonConverter[] converters) {
             return controller.DirectEvent(name, data, null, converters);
         }
 
-        public static DirectEventResult DirectEvent(this Controller controller, string name, object data, string contentType, params JsonConverter[] converters) {
+        public static DirectEventResult DirectEvent(this IController controller, string name, object data, string contentType, params JsonConverter[] converters) {
             return controller.DirectEvent(name, data, contentType, null, converters);
         }
 
-        public static DirectEventResult DirectEvent(this Controller controller, string name, object data, string contentType, Encoding contentEncoding, params JsonConverter[] converters) {
+        public static DirectEventResult DirectEvent(this IController controller, string name, object data, string contentType, Encoding contentEncoding, params JsonConverter[] converters) {
             JsonSerializerSettings settings = (converters != null && converters.Length > 0)
                 ? new JsonSerializerSettings { Converters = converters }
                 : null;
@@ -131,7 +97,7 @@ namespace Ext.Direct.Mvc {
             return controller.DirectEvent(name, data, contentType, contentEncoding, settings);
         }
 
-        public static DirectEventResult DirectEvent(this Controller controller, string name, object data, string contentType, Encoding contentEncoding, JsonSerializerSettings settings) {
+        public static DirectEventResult DirectEvent(this IController controller, string name, object data, string contentType, Encoding contentEncoding, JsonSerializerSettings settings) {
             if (String.IsNullOrEmpty(name)) {
                 throw new ArgumentException(DirectResources.Common_NullOrEmpty, "name");
             }

@@ -39,7 +39,7 @@ namespace Ext.Direct.Mvc {
             }
 
             if (request.IsFormPost) {
-                this.Result = new DirectFormResponseData(false);
+                this.Result = new {success = false};
             }
         }
 

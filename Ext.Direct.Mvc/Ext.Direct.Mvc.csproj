@@ -65,7 +65,6 @@
     <Compile Include="DirectEventResponse.cs" />
     <Compile Include="DirectEventResult.cs" />
     <Compile Include="DirectException.cs" />
-    <Compile Include="DirectFormResponseData.cs" />
     <Compile Include="DirectResponseBase.cs" />
     <Compile Include="Extensions\ControllerExtensions.cs" />
     <Compile Include="Extensions\MethodExtensions.cs" />

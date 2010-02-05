@@ -45,11 +45,10 @@ namespace Ext.Direct.Mvc {
 
         // Adds class methods (controller actions) to the internal collection
         private void ConfigureMethods(Type type) {
-            string name;
             var methods = type.GetMethods();
             foreach (var method in methods) {
                 if (method.IsDirectMethod()) {
-                    name = method.GetName();
+                    string name = method.GetName();
                     if (_methods.ContainsKey(name)) {
                         throw new Exception(String.Format(DirectResources.DirectAction_MethodExists, name, this.Name));
                     }
@@ -59,11 +58,9 @@ namespace Ext.Direct.Mvc {
         }
 
         internal DirectMethod GetMethod(string name) {
-            if (!_methods.ContainsKey(name)) {
-                return null;
-            }
-            return _methods[name];
+            return _methods.ContainsKey(name) ? _methods[name] : null;
         }
+
         // Writes JSON representaion of the action to the specified JsonWriter.
         // Used to generate Ext.Direct API
         internal void WriteJson(JsonWriter jsonWriter) {

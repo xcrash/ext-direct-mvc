@@ -28,8 +28,7 @@ namespace Ext.Direct.Mvc {
     [JsonObject]
     public class DirectErrorResponse : DirectResponse {
 
-        public DirectErrorResponse(DirectRequest request, Exception exception)
-            : base(request) {
+        public DirectErrorResponse(DirectRequest request, Exception exception) : base(request) {
             this.ErrorMessage = exception.Message;
             this.ErrorData = exception.Data.Count > 0 ? exception.Data : null;
 

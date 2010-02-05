@@ -36,13 +36,10 @@ namespace Ext.Direct.Mvc {
 
         private static DirectProvider _currentProvider;
         private static readonly object _syncLock = new object();
-
-        public const string RemotingProvider = "remoting";
         private IControllerFactory _factory;
-
         private readonly IDictionary<string, DirectAction> _actions = new Dictionary<string, DirectAction>();
 
-        public DirectProvider() { }
+        private const string RemotingProvider = "remoting";
 
         public DirectProvider(Assembly assembly) {
             if (assembly != null) {
@@ -133,20 +130,11 @@ namespace Ext.Direct.Mvc {
             return String.Format("{0}={1};", this.Name, sb);
         }
 
-        internal DirectAction GetAction(string name) {
+        private DirectAction GetAction(string name) {
             if (!_actions.ContainsKey(name)) {
                 return null;
             }
             return _actions[name];
-        }
-
-        internal DirectMethod GetActionMethod(string actionName, string methodName) {
-            DirectMethod method = null;
-            DirectAction action = this.GetAction(actionName);
-            if (action != null) {
-                method = action.GetMethod(methodName);
-            }
-            return method;
         }
 
         public void Execute(RequestContext requestContext) {

@@ -25,8 +25,7 @@ namespace Ext.Direct.Mvc {
 
     public class DirectResponse : DirectResponseBase {
 
-        public DirectResponse(DirectRequest request)
-            : base(request) {
+        public DirectResponse(DirectRequest request) : base(request) {
             this.TransactionId = request.TransactionId;
             this.Action = request.Action;
             this.Method = request.Method;

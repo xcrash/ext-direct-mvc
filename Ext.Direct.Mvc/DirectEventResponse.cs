@@ -25,9 +25,7 @@ namespace Ext.Direct.Mvc {
 
     public class DirectEventResponse : DirectResponseBase {
 
-        public DirectEventResponse(DirectRequest request)
-            : base(request) {
-        }
+        public DirectEventResponse(DirectRequest request) : base(request) { }
 
         [JsonProperty("type")]
         public string Type {

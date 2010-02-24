@@ -38,6 +38,7 @@ namespace Ext.Direct.Mvc {
         }
 
         [AcceptVerbs("POST")]
+        [ValidateInput(false)]
         public ActionResult Router() {
             // Process Ext.Direct requests
 

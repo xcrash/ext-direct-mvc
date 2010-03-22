@@ -79,7 +79,7 @@ namespace Ext.Direct.Mvc.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Method {0} already exists in action {1}. Please use a different name or mark it with ActionNameAttribute..
+        ///   Looks up a localized string similar to Method {0} has already been configured for action {1}..
         /// </summary>
         internal static string DirectAction_MethodExists {
             get {
@@ -93,6 +93,15 @@ namespace Ext.Direct.Mvc.Resources {
         internal static string DirectConfig_NoExtDirectSectionFound {
             get {
                 return ResourceManager.GetString("DirectConfig_NoExtDirectSectionFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Action {0} has already been configured..
+        /// </summary>
+        internal static string DirectProvider_ActionExists {
+            get {
+                return ResourceManager.GetString("DirectProvider_ActionExists", resourceCulture);
             }
         }
         

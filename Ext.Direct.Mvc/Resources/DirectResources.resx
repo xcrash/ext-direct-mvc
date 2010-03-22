@@ -124,10 +124,13 @@
     <value>Value cannot be null or empty.</value>
   </data>
   <data name="DirectAction_MethodExists" xml:space="preserve">
-    <value>Method {0} already exists in action {1}. Please use a different name or mark it with ActionNameAttribute.</value>
+    <value>Method {0} has already been configured for action {1}.</value>
   </data>
   <data name="DirectConfig_NoExtDirectSectionFound" xml:space="preserve">
     <value>Could not find section 'ext.direct' in the configuration file.</value>
+  </data>
+  <data name="DirectProvider_ActionExists" xml:space="preserve">
+    <value>Action {0} has already been configured.</value>
   </data>
   <data name="DirectProvider_ActionNotFound" xml:space="preserve">
     <value>Unable to find action {0}.</value>

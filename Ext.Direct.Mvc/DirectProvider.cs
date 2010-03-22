@@ -41,10 +41,8 @@ namespace Ext.Direct.Mvc {
 
         private const string RemotingProvider = "remoting";
 
-        public DirectProvider(Assembly assembly) {
-            if (assembly != null) {
-                Configure(assembly);
-            }
+        public DirectProvider() {
+            this.Configure();
         }
 
         public string Name {
@@ -77,13 +75,21 @@ namespace Ext.Direct.Mvc {
             private set;
         }
 
-        public void Configure(Assembly assembly) {
+        public void Configure() {
             if (!this.Configured) {
-                var types = assembly.GetTypes();
-                foreach (var type in types) {
-                    if (type.IsDirectAction()) {
-                        var action = new DirectAction(type);
-                        _actions.Add(action.Name, action);
+                string[] assemblyNames = DirectConfig.Assembly.Split(',');
+                for (int i = 0; i < assemblyNames.Length; i++) {
+                    string assemblyName = assemblyNames[i].Trim();
+                    Assembly assembly = Assembly.Load(assemblyName);
+                    var types = assembly.GetTypes();
+                    foreach (var type in types) {
+                        if (type.IsDirectAction()) {
+                            var action = new DirectAction(type);
+                            if (_actions.ContainsKey(action.Name)) {
+                                throw new Exception(String.Format(DirectResources.DirectProvider_ActionExists, action.Name));
+                            }
+                            _actions.Add(action.Name, action);
+                        }
                     }
                 }
                 this.Configured = true;
@@ -213,8 +219,7 @@ namespace Ext.Direct.Mvc {
             if (_currentProvider == null) {
                 lock (_syncLock) {
                     if (_currentProvider == null) {
-                        Assembly assembly = Assembly.Load(DirectConfig.Assembly);
-                        _currentProvider = new DirectProvider(assembly) {
+                        _currentProvider = new DirectProvider {
                             Name = DirectConfig.ProviderName,
                             Namespace = DirectConfig.Namespace,
                             Buffer = DirectConfig.Buffer

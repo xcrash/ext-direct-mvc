@@ -56,9 +56,12 @@ namespace Ext.Direct.Mvc {
                 serializer.Converters.Add(DirectConfig.DefaultDateTimeConverter);
             }
 
-            using (var writer = new StringWriter()) {
-                serializer.Serialize(writer, this);
-                jsonResponse = writer.ToString();
+            using (var stringWriter = new StringWriter()) {
+                using (var jsonWriter = new JsonTextWriter(stringWriter)) {
+                    jsonWriter.Formatting = DirectConfig.Debug ? Formatting.Indented : Formatting.None;
+                    serializer.Serialize(jsonWriter, this);
+                    jsonResponse = stringWriter.ToString();
+                }
             }
 
             return jsonResponse;

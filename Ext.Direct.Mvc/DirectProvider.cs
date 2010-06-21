@@ -106,9 +106,7 @@ namespace Ext.Direct.Mvc {
             var sw = new StringWriter(sb);
 
             using (JsonWriter jsonWriter = new JsonTextWriter(sw)) {
-#if DEBUG
-                jsonWriter.Formatting = Formatting.Indented;
-#endif
+                jsonWriter.Formatting = DirectConfig.Debug ? Formatting.Indented : Formatting.None;
                 jsonWriter.WriteStartObject();
                 jsonWriter.WriteProperty("url", this.Url);
                 jsonWriter.WriteProperty("type", RemotingProvider);

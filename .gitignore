@@ -1,0 +1,7 @@
+*.user
+_ReSharper.*
+*.suo
+Ext.Direct.Mvc/bin
+Ext.Direct.Mvc/obj
+Ext.Direct.Mvc.Demo/bin
+Ext.Direct.Mvc.Demo/obj

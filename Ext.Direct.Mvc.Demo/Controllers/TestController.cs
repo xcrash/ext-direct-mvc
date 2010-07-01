@@ -10,23 +10,23 @@ namespace Ext.Direct.Mvc.Demo.Controllers {
 
     public class TestController : Controller {
 
-        public ActionResult SayHello() {
+        public DirectResult SayHello() {
             return this.Direct("Hello, world!");
         }
 
-        public ActionResult EchoDate(DateTime date) {
+        public DirectResult EchoDate(DateTime date) {
             return this.Direct(date);
         }
 
-        public ActionResult AddNumbers(int a, int b) {
+        public DirectResult AddNumbers(int a, int b) {
             return this.Direct(a + b);
         }
 
-        public ActionResult EchoPerson(Person person) {
+        public DirectResult EchoPerson(Person person) {
             return this.Direct(person, new JavaScriptDateTimeConverter(), new StringEnumConverter());
         }
 
-        public ActionResult TestException() {
+        public DirectResult TestException() {
             var e = new DirectException("This statement is the original exception message.");
             e.Data.Add("stringInfo", "Additional string information.");
             e.Data["intInfo"] = -903;
@@ -37,7 +37,7 @@ namespace Ext.Direct.Mvc.Demo.Controllers {
         }
 
         [ActionName("LoadPerson")] // Action alias
-        public ActionResult LoadForm() {
+        public DirectResult LoadForm() {
             var person = new Person {
                 Name = "John Smith",
                 Email = "john.smith@example.com",
@@ -53,7 +53,7 @@ namespace Ext.Direct.Mvc.Demo.Controllers {
 
         [FormHandler]
         [ActionName("SavePerson")] // Action alias
-        public ActionResult SaveForm(Person p) {
+        public DirectResult SaveForm(Person p) {
             return this.Direct(new {
                 success = true,
                 data = p
@@ -61,7 +61,7 @@ namespace Ext.Direct.Mvc.Demo.Controllers {
         }
 
         [FormHandler]
-        public ActionResult UploadFiles(string firstName, string lastName) {
+        public DirectResult UploadFiles(string firstName, string lastName) {
             var files = Request.Files;
 
             foreach (string file in files) {
@@ -82,7 +82,7 @@ namespace Ext.Direct.Mvc.Demo.Controllers {
             });
         }
 
-        public ActionResult GetTree(string nodeId) {
+        public DirectResult GetTree(string nodeId) {
             var array = new ArrayList();
             if (nodeId == "root") {
                 for (int i = 0; i <= 5; i++) {

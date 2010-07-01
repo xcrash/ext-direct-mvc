@@ -32,8 +32,8 @@ namespace Ext.Direct.Mvc {
         }
 
         internal static bool IsDirectMethod(this MethodInfo method) {
-            // Any controller action is a Direct method unless marked with DirectIgnoreAttribute
-            bool returnsActionResult = (method.ReturnType == typeof(ActionResult) || method.ReturnType.IsSubclassOf(typeof(ActionResult)));
+            // Any controller action with return type DirectResult is a Direct method unless marked with DirectIgnoreAttribute
+			bool returnsActionResult = (method.ReturnType == typeof(DirectResult) || method.ReturnType.IsSubclassOf(typeof(ActionResult)));
             bool ignore = method.HasAttribute<DirectIgnoreAttribute>();
             return (returnsActionResult && !ignore);
         }

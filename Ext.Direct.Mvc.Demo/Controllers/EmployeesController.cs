@@ -9,7 +9,7 @@ namespace Ext.Direct.Mvc.Demo.Controllers {
 
         readonly SampleDataContext _db = new SampleDataContext();
 
-        public ActionResult Get(int start, int limit, string sort, string dir) {
+        public DirectResult Get(int start, int limit, string sort, string dir) {
             var employeeList = _db.Employees
                 .OrderBy(sort + " " + dir)
                 .Skip(start)

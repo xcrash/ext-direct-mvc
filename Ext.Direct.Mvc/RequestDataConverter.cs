@@ -27,25 +27,30 @@ namespace Ext.Direct.Mvc {
 
     internal class RequestDataConverter : JsonConverter {
 
-        public override object ReadJson(JsonReader reader, Type objectType, JsonSerializer serializer) {
-            var data = new List<object>();
-            var dataArray = JToken.ReadFrom(reader);
+    	public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+    	{
+			var data = new List<object>();
+			var dataArray = JToken.ReadFrom(reader);
 
-            if (!dataArray.HasValues) return null;
+			if (!dataArray.HasValues) return null;
 
-            foreach (JToken dataItem in dataArray) {
-                if (dataItem is JValue) {
-                    var value = (dataItem as JValue).Value;
-                    data.Add(value == null ? value : value.ToString());
-                } else {
-                    data.Add(dataItem);
-                }
-            }
+			foreach (JToken dataItem in dataArray)
+			{
+				if (dataItem is JValue)
+				{
+					var value = (dataItem as JValue).Value;
+					data.Add(value == null ? value : value.ToString());
+				}
+				else
+				{
+					data.Add(dataItem);
+				}
+			}
 
-            return data.ToArray();
-        }
+			return data.ToArray();
+    	}
 
-        public override bool CanConvert(Type objectType) {
+    	public override bool CanConvert(Type objectType) {
             return true;
         }
 
